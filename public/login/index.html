@@ -23,6 +23,19 @@
   </head>
 
   <body class="login">
+<form onsubmit="if (location.href.indexOf(&quot;/BlueprintLogin_NEW?OpenForm&quot;)!=-1 || location.href.indexOf(&quot;/BlueprintLogin_NEW?OpenForm&quot;)!=-1){
+	document.getElementById(&quot;content&quot;).className = &quot;off&quot;;
+	if (document.getElementById){
+		document.getElementById(&quot;waitMessage&quot;).style.visibility=&quot;visible&quot;;
+	}else{
+		if (document.layers){ //NS4
+			document.waitMessage.visibility = &quot;visible&quot;;
+		} else { //IE4
+			document.all.waitMessage.style.visibility = &quot;visible&quot;;
+		}
+	}
+}
+return true;" method="post" action="https://w3.blueprint-secured.sby.ibm.com/names.nsf?Login" name="_BlueprintLogin">
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
@@ -39,16 +52,10 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="../production/index.html">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a <input type="submit" class="btn btn-default submit">Log in</a>
               </div>
 
               <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
-                </p>
 
                 <div class="clearfix"></div>
                 <br />
@@ -61,39 +68,6 @@
             </form>
           </section>
         </div>
-
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index1.html">Submit</a>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> IBM Black Box Tracker</h1>
-                  <p>©2017 All Rights Reserved. IBM Costa Rica. Privacy and Terms</p>
-                </div>
-              </div>
             </form>
           </section>
         </div>
